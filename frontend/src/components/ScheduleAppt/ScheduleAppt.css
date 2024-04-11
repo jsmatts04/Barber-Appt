@@ -1,0 +1,232 @@
+/* ScheduleAppt.css */
+.S-container {
+  background-color: #2f2f2f;
+  border-radius: 25px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(10%);
+}
+
+.time-picker {
+  background: none;
+  border: 1px solid #353535;
+  padding: 15px 23px;
+  font-size: 16px;
+  border-radius: 8px;
+  color: #979797;
+  width: calc(100% - 46px);
+  box-shadow: rgb(136 136 136 / 17%) 0px -23px 25px 0px inset,
+    rgb(81 81 81 / 23%) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.time-picker:focus {
+  border-color: #0173ed;
+  outline: none;
+}
+
+.time-picker-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.time-picker {
+  width: 48%;
+}
+.sign-up-heading {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.paragraph {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: red;
+  font-weight: 700;
+}
+
+.success-message {
+  color: green;
+  font-weight: 700;
+}
+
+.input-group input {
+  background: none;
+  border: 1px solid #353535;
+  padding: 15px 23px;
+  font-size: 16px;
+  border-radius: 8px;
+  color: #979797;
+  width: calc(100% - 46px);
+  box-shadow: rgb(136 136 136 / 17%) 0px -23px 25px 0px inset,
+    rgb(81 81 81 / 23%) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.input-group input:focus {
+  border-color: #0173ed;
+  outline: none;
+}
+
+.appointment-container {
+  background-color: #2f2f2f;
+  padding: 40px;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.appointment-form input {
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.appointment-form input:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+.appointment-form button {
+  padding: 14px 20px;
+  background-color: #af8d55;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.appointment-form button:hover {
+  background-color: #706955;
+}
+
+/* ScheduleAppt.css */
+.time-button {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-right: 10px;
+  background: linear-gradient(to bottom, #ffffff, #484848);
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #000000; /* Change text color if necessary */
+}
+
+.time-button:hover {
+  background: linear-gradient(to bottom, #d7a554, #434343);
+}
+
+.time-button.selected {
+  background: linear-gradient(to bottom, #d7a554, #434343);
+  color: #fff;
+}
+
+.time-button.time-booked {
+  background: linear-gradient(to bottom, #eb6363, #d25757);
+  color: #999999; /* Change this to the desired text color */
+  cursor: not-allowed;
+  pointer-events: none; /* Disable pointer events for the button */
+}
+
+
+.footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 0px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.time-button.time-passed {
+  background: linear-gradient(to bottom, #595959, #434343);
+  color: #999999;
+  cursor: not-allowed;
+  pointer-events: none; /* Disable pointer events for the button */
+}
+
+.time-button.time-passed:hover {
+  background-color: #dddddd; /* Keep the same background color on hover */
+}
+
+/* Add these styles to your CSS file */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure modal is above other elements */
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content img {
+  width: 250px; /* Adjust width as needed */
+  height: 250px; /* Adjust height as needed */
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  background-color: #af8d55;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.modal-content button:hover {
+  background-color: #706955;
+}
