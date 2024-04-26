@@ -1,35 +1,28 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion"; // Import motion from framer-motion
+import { Link, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./Navbar.css";
+import LoggedOutNavbar from "./LoggedOutNavbar";
+import LoggedInNavbar from "./LoggedInNavbar";
 
 const Navbar = ({ isLoggedIn, logout }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    console.log("Logging out...");
+    logout();
+    console.log("Navigating to homepage...");
+    navigate("/", { replace: true });
+  };
+
   return (
-    <ul className="navbar">
-      <motion.li className="navbar-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-        <Link to="/">Home</Link>
-      </motion.li>
-      {!isLoggedIn && (
-        <>
-          <motion.li className="navbar-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <Link to="/signup">Sign Up</Link>
-          </motion.li>
-          <motion.li className="navbar-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <Link to="/login">Login</Link>
-          </motion.li>
-        </>
+    <nav>
+      {isLoggedIn ? (
+        <LoggedInNavbar handleLogout={handleLogout} />
+      ) : (
+        <LoggedOutNavbar />
       )}
-      {isLoggedIn && (
-        <>
-          <motion.li className="navbar-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <Link to="/ScheduleAppt">Schedule</Link>
-          </motion.li>
-          <motion.li className="navbar-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <Link to="#" onClick={logout}>Logout</Link>
-          </motion.li>
-        </>
-      )}
-    </ul>
+    </nav>
   );
 };
 

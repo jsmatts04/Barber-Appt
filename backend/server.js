@@ -111,9 +111,6 @@ app.get("/getBookedTimes", (req, res) => {
   });
 });
 
-
-
-
 // Function to generate JWT token
 function generateToken(userId) {
   return jwt.sign({ userId }, secretKey, { expiresIn: "24h" });
