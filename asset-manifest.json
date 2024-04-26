@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/barber-appt/static/css/main.9c682caf.css",
+    "main.js": "/barber-appt/static/js/main.f397de1b.js",
+    "static/js/453.a54394f2.chunk.js": "/barber-appt/static/js/453.a54394f2.chunk.js",
+    "static/media/VidBackground.mp4": "/barber-appt/static/media/VidBackground.d97c2d95d6ca0f6f74f8.mp4",
+    "static/media/checkmark.gif": "/barber-appt/static/media/checkmark.f672ee588bd89564a673.gif",
+    "index.html": "/barber-appt/index.html",
+    "main.9c682caf.css.map": "/barber-appt/static/css/main.9c682caf.css.map",
+    "main.f397de1b.js.map": "/barber-appt/static/js/main.f397de1b.js.map",
+    "453.a54394f2.chunk.js.map": "/barber-appt/static/js/453.a54394f2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c682caf.css",
+    "static/js/main.f397de1b.js"
+  ]
+}
