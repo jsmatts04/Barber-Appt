@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import React from "react";
+import {useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import LoggedOutNavbar from "./LoggedOutNavbar";
 import LoggedInNavbar from "./LoggedInNavbar";
