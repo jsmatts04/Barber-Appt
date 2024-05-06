@@ -11,10 +11,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Define the secret key at the global scope
 const secretKey = process.env.SECRET_KEY;
 
-// Create MySQL connection
 const con = mysql.createConnection({
   user: process.env.DB_USER,
   host: process.env.DB_HOST,
@@ -22,7 +20,6 @@ const con = mysql.createConnection({
   database: process.env.DB_DATABASE,
 });
 
-// Route for user sign up
 app.post("/signUp", (req, res) => {
   const password = req.body.password;
   bcrypt.hash(password.toString(), salt, (err, hash) => {
