@@ -7,6 +7,7 @@ import { SignUp } from "./SignUp/SignUp";
 import Navbar from "./Navbar/Navbar";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
+import ApptHistory from "./ApptHistory/ApptHistory";
 
 const pageTransitionVariants = {
   initial: {
@@ -94,6 +95,22 @@ function RouterFunction() {
                     transition={{ duration: 0.5 }}
                   >
                     <ScheduleAppt />
+                  </motion.div>
+                }
+              />
+            )}
+            {isLoggedIn && (
+              <Route
+                path="/ApptHistory"
+                element={
+                  <motion.div
+                    initial="initial"
+                    animate="in"
+                    exit="out"
+                    variants={pageTransitionVariants}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <ApptHistory />
                   </motion.div>
                 }
               />
