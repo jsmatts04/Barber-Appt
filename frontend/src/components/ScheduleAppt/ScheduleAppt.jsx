@@ -37,7 +37,7 @@ export const ScheduleAppt = () => {
   useEffect(() => {
     if (selectedDate) {
       axios
-        .get("http://localhost:3001/getBookedTimes", {
+        .get("https://barber-appt.onrender.com/getBookedTimes", {
           params: {
             date: selectedDate,
           },
@@ -98,7 +98,7 @@ export const ScheduleAppt = () => {
     if (!hasError) {
       if (!formSubmitted) {
         axios
-          .post("http://localhost:3001/ScheduleAppt", {
+          .post("https://barber-appt.onrender.com/ScheduleAppt", {
             fullName: fullName,
             date: selectedDate,
             time: selectedTime,

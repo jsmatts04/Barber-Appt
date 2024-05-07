@@ -31,7 +31,7 @@ export const SignUp = () => {
       setSignUpStatus("Please fill in all fields.");
       return;
     }
-    Axios.post("http://localhost:3001/signUp", {
+    Axios.post("https://barber-appt.onrender.com/signUp", {
       fullName: fullName,
       email: email,
       password: password,

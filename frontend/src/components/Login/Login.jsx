@@ -28,7 +28,7 @@ export const Login = ({ onLogin }) => {
       setLoginStatus("Please fill in all fields.");
       return;
     }
-    Axios.post("http://localhost:3001/login", {
+    Axios.post("https://barber-appt.onrender.com/login", {
       email: email,
       password: password,
     })
